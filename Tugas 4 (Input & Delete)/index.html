@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <script>
+        // Kode JavaScript Anda
+        const library = [
+            {
+                title: "The Great Gatsby",
+                author: "F. Scott Fitzgerald",
+                status: {
+                    own: true,
+                    reading: false,
+                    read: true
+                }
+            },
+            {
+                title: "To Kill a Mockingbird",
+                author: "Harper Lee",
+                status: {
+                    own: true,
+                    reading: false,
+                    read: true
+                }
+            },
+            {
+                title: "1984",
+                author: "George Orwell",
+                status: {
+                    own: true,
+                    reading: false,
+                    read: true
+                }
+            }
+        ];
+
+        const firstBook = library[0].title;
+
+        const libraryJSON = JSON.stringify(library);
+
+        function addBook() {
+            // Implement logic to add a new book to the library
+        }
+
+        function deleteBook(index) {
+            // Implement logic to delete a book from the library
+        }
+    </script>
+</head>
+<body>
+    <h1>My Book Library</h1>
+    <ul id="bookList">
+        <!-- Daftar buku akan ditampilkan di sini -->
+    </ul>
+    <input type="text" id="newBookTitle" placeholder="Enter book title">
+    <button onclick="addBook()">Add Book</button>
+</body>
+</html>
