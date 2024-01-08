@@ -1,36 +1,31 @@
-
 function calculate() {
-    const num1 = parseFloat(document.getElementById("number1").value);
-    const num2 = parseFloat(document.getElementById("number2").value);
-    const operator = document.getElementById("operator").value;
+  var number1 = parseFloat(document.getElementById("number1").value);
+  var number2 = parseFloat(document.getElementById("number2").value);
+  var operator = document.getElementById("operator").value;
+  var resultElement = document.getElementById("result");
 
-    let result;
+  if (!isNaN(number1) && !isNaN(number2)) {
     switch (operator) {
-        case '+':
-            result = num1 + num2;
-            break;
-        case '-':
-            result = num1 - num2;
-            break;
-        case '*':
-            result = num1 * num2;
-            break;
-        case '/':
-            if (num2 !== 0) {
-                result = num1 / num2;
-            } else {
-                result = "Error: Division by zero is not allowed.";
-            }
-            break;
-        default:
-            result = "Error: Operator yang di input salah. harap gunakan +, -, *, or /.";
+      case "+":
+        resultElement.textContent = number1 + number2;
+        break;
+      case "-":
+        resultElement.textContent = number1 - number2;
+        break;
+      case "*":
+        resultElement.textContent = number1 * number2;
+        break;
+      case "/":
+        if (number2 !== 0) {
+          resultElement.textContent = number1 / number2;
+        } else {
+          resultElement.textContent = "Tidak bisa dibagi dengan nol";
+        }
+        break;
+      default:
+        resultElement.textContent = "Operator tidak valid";
     }
-
-    document.getElementById("result").textContent = result;
+  } else {
+    resultElement.textContent = "Masukkan bilangan yang valid";
+  }
 }
-
-// Contoh penggunaan:
-const result1 = calculator(10, 5, '+'); // Hasil: 15
-const result2 = calculator(10, 5, '*'); // Hasil: 50
-const result3 = calculator(10, 0, '/'); // Hasil: "Error: Division by zero is not allowed."
-const result4 = calculator(10, 5, '%'); // Hasil: "Error: Invalid operator. Please use +, -, *, or /."

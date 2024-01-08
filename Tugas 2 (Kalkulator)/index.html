@@ -1,22 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Zacky Kalkulator</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Zacky Kalkulator</h1>
-    <h4>
-    <form name="calculator">
-        Bilangan 1: <input type="text" id="number1"><br>
-        Bilangan 2: <input type="text" id="number2"><br>
-        Operator: <input type="text" id="operator" placeholder="+, -, *, /"><br>
-        <input type="button" value="Jumlahkan" onclick="calculate()">
+    <form id="calculator-form">
+      <label for="number1">Bilangan 1:</label>
+      <input type="text" id="number1" /><br />
+
+      <label for="number2">Bilangan 2:</label>
+      <input type="text" id="number2" /><br />
+
+      <label for="operator">Operator (+, -, *, /):</label>
+      <input type="text" id="operator" placeholder="+, -, *, /" /><br />
+
+      <button type="button" onclick="calculate()">Jumlahkan</button>
     </form>
-</h4>
-    <p>The result is: <span id="result"></span></p>
+
+    <p>Hasil: <span id="result"></span></p>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
