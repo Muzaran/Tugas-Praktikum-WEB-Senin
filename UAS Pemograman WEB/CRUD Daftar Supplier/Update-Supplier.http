@@ -1,0 +1,15 @@
+PUT http://localhost:3000/PUT /suppliers/1
+Content-Type: application/json
+
+{
+  "name": "pt. pabrik buku indonesia",
+  "address": "Soekarno Bandung"
+}
+
+/suppliers/:1
+Content-Type: application/json
+
+{
+   "name": "Zaky Book bos",
+   "address": "Pangalengan Bandung"
+}

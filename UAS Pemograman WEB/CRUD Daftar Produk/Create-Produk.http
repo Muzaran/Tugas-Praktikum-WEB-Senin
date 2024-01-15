@@ -1,0 +1,8 @@
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "Pensil 2b faber kastel",
+  "stock": 100,
+  "categoryId": 2
+}

@@ -1,0 +1,8 @@
+PUT http://localhost:3000/products/1
+Content-Type: application/json
+
+{
+  "name": "pensil 3b",
+  "stock": 150,
+  "categoryId": 2
+}

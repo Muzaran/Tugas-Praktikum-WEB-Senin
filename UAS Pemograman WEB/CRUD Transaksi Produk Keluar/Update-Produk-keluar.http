@@ -1,0 +1,7 @@
+PUT http://localhost:3000/outgoing-transactions/:id
+Content-Type: application/json
+
+{
+  "productId": 2,
+  "quantity": 8
+}
